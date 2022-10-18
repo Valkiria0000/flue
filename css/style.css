@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

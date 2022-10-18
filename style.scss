@@ -1,0 +1,49 @@
+$green: #4c858b;
+$red: #e33e54;
+$orange: #ea6628;
+$black: #000;
+$white: #fff;
+
+$maxWidth: 1440;
+$maxWidthContainer: 1100;
+
+@mixin adaptiv($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type == 1 {
+    //только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 320px) / #{$maxWidthContainer - 320})
+      );
+    }
+  } @else if $type == 2 {
+    //только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+      );
+    }
+  } @else {
+    //всегда
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+    );
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+}
