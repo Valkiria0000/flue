@@ -1,0 +1,10 @@
+mixin social(social_items)
+  div.social-link
+    each item in social_items
+      a.social_link(href=item.href): img.social_img(src=item.src alt=item.alt)
+
++social([{"href": "#", "src": "..//../img/social/vk.svg", "alt": "icon vk"},
+      {"href": "#", "src": "..//../img/social/telegram.svg","alt": "icon telegram"},
+      {"href": "#", "src": "..//../img/social/instagram.svg","alt": "icon instagram"},
+      {"href": "#", "src": "..//../img/social/whatsapp.svg","alt": "icon whatsapp"},
+      ])
