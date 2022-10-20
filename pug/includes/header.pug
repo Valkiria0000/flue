@@ -1,19 +1,10 @@
-mixin nav(nav_items)
-  ul.navmenu
-    each item in nav_items
-      li.navmenu_item: a.navmenu_link(href=item.href) #{item.title}
-
-mixin groop(groop_items)
-  div.groop
-    each item in groop_items
-      button.groop_btn
-        img.groop_img(src=item.src alt=item.alt)    
-
+include config.pug
 
 header.header 
   img.header_logo(src="img/Logo.png", alt="logo company")
   .burger
   nav.nav
+    
     +nav([{'title': 'каталог товаров', 'href': '#'}, 
         {'title': 'доставка и оплата', 'href': '#'},
         {'title': 'Цены ', 'href': '#'},
@@ -26,9 +17,9 @@ header.header
 
       include social.pug
   +groop([
-    {"src": "../..//img/icon/search.svg", "alt": "icon search"},
-    {"src": "../..//img/icon/likes.svg", "alt": "icon likes"},
-    {"src": "../..//img/icon/cart.svg", "alt": "icon cart"}
+    {"src": "img/icon/search.svg", "alt": "icon search"},
+    {"src": "img/icon/likes.svg", "alt": "icon likes"},
+    {"src": "img/icon/cart.svg", "alt": "icon cart"}
   ])
 
                 

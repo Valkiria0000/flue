@@ -1,0 +1,15 @@
+mixin nav(nav_items)
+  ul.navmenu
+    each item in nav_items
+      li.navmenu_item: a.navmenu_link(href=item.href) #{item.title}
+
+mixin groop(groop_items)
+  div.groop
+    each item in groop_items
+      button.groop_btn
+        img.groop_img(src=item.src alt=item.alt)
+
+mixin breadcrumbs(breadcrumbs_items)
+  ul.breadcrumbs_menu
+    each item in breadcrumbs_items
+      li.breadcrumbs_item: a.breadcrumbs_link(href=item.href) #{item.title} 
