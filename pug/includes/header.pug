@@ -3,6 +3,8 @@ include config.pug
 header.header 
   img.header_logo(src="img/Logo.png", alt="logo company")
   .burger
+    span.burger_line
+              
   nav.nav
     
     +nav([{'title': 'каталог товаров', 'href': '#'}, 
@@ -13,7 +15,7 @@ header.header
     
     .contact-menu 
       a.contact-menu_link(href="tel:+78125092198") <span class="mark-link">+7 (812)</span> 509 21 98
-      a.contact-menu_link(href="#") перезвоните мне
+      a.contact-menu_link.is-red(href="#") перезвоните мне
 
       include social.pug
   +groop([
