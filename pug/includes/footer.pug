@@ -1,0 +1,33 @@
+include config.pug
+footer.footer 
+  .catalog
+    p.footer_title КАТАЛОГ
+    +catalog_block([{'title': 'Дымоходы ', 'href': '#'}, 
+        
+        {'title': 'Дымососы ', 'href': '#'}, 
+        {'title': 'Печи для дома ', 'href': '#'}, 
+        {'title': 'Печи для бани ', 'href': '#'}, 
+        {'title': 'Камины ', 'href': '#'}, 
+        {'title': 'Силикат кальция ', 'href': '#'}, 
+        {'title': 'Котлы ', 'href': '#'},
+        {'title': 'Ещё ', 'href': '#'},
+        ])
+  .info
+    p.footer_title ИНФОРМАЦИЯ
+    +info_block([{'title': 'Каталог ', 'href': '#'}, 
+        
+        {'title': 'Установка и монтаж', 'href': '#'}, 
+        {'title': 'Отзывы ', 'href': '#'}, 
+        {'title': 'Ликвидация товара', 'href': '#'}, 
+        {'title': 'Полезное', 'href': '#'}, 
+        {'title': 'Контакты', 'href': '#'}, 
+        {'title': 'Оплата и доставка', 'href': '#'},
+        ])
+  .contact
+    p.footer_title ВРЕМЯ РАБОТЫ
+    .contact_item
+      img.contact_img(src="img/wall-clock 1.svg", alt="time working")
+      p.contact_text <span class="is-red">пн-пт</span> 9:00 – 20:00 <span class="is-red" сб-вс</span> 10:00 – 18:00
+      img.contact_img(src="img/placeholder 1.svg", alt="location")
+      p.contact_text г. Санкт - Петербург ,ул. Тамбасова д.7
+  include social.pug
