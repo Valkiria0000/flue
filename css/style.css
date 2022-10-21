@@ -17,15 +17,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 26px 63px;
+  padding: 25px 47px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+.header_logo {
+  margin-right: 50px;
+}
+
 .burger {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +40,7 @@ body {
   position: relative;
   border: 1px solid #4c858b;
   border-radius: 50%;
+  margin-right: 32px;
 }
 
 .burger_line,
@@ -103,15 +104,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   list-style-type: none;
-  min-width: 665px;
-  margin-right: 56px;
+  margin-right: 58px;
 }
 .navmenu_item {
-  padding-right: 30px;
+  padding-right: 37px;
 }
 .navmenu_link {
   text-decoration: none;
@@ -119,9 +119,8 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 23px;
-  /* identical to box height, or 144% */
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding-right: 20px;
 }
 
 .contact-menu {
@@ -133,30 +132,46 @@ body {
           align-items: center;
 }
 .contact-menu_link {
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  /* identical to box height */
   letter-spacing: 0.08em;
   color: #000;
-  margin-right: 70px;
+  text-decoration: none;
 }
 
-.mark-link {
+.mark-span {
   color: #4c858b;
+}
+
+.red-link {
+  color: #e33e54;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-transform: uppercase;
+  border-bottom: 2px dotted #e33e54;
+  letter-spacing: 1px;
+  margin-left: 73px;
+  margin-right: 61px;
 }
 
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 45px;
 }
-.social_link {
-  margin-right: 10px;
+.social_img {
+  margin-right: 15px;
 }
+
 .groop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,6 +192,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 16px;
 }
 .is-red {
   color: #e33e54;
