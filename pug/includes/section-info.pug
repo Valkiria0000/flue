@@ -1,14 +1,13 @@
 section.info
-    .container
       h2.title Почему Дымоход.ру?
       p.paragraph В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык» 
-      .cards 
+      .info_cards 
         .card
-          img(src="img/card/architect 1.svg", alt="icon") 
+          img(src="img/card/guarantee 1.svg", alt="icon") 
           h5.card_title Большой гарантийный срок
           p.card_text Крепёж, стыковка элементов – <span class="is-red">10 лет</span><br>Cквозная коррозия труб – <span class="is-red">5 лет</span><br>Гидроизоляция – <span class="is-red">3 года</span>
         .card
-          img(src="img/card/guarantee 1.svg", alt="icon") 
+          img(src="img/card/architect 1.svg", alt="icon") 
           h5.card_title Помощь в покупке агрегата 
           p.card_text (печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом
         .card
@@ -16,12 +15,12 @@ section.info
           h5.card_title Реальные отзывы клиентов
           p.card_text Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.
       h4.info_title необходима консультация?
-      p.info-text оставьте заявку или свяжитесь с нами в социальных сетях
+      p.info_text оставьте заявку или свяжитесь с нами в социальных сетях
       include social.pug
-      .info_content
-        p.info_content_title Для <span class="is-orange">консультации<span> заполните форму!
-        p.info_content_text С Вами свяжутся в ближайшее время
+      .form-content
+        p.form-content_title Для <span class="is-orange">консультации</span> заполните форму!
+        p.form-content_text С Вами свяжутся в ближайшее время
         form.form(action="", method="get")
-        input.form_input(type="text" required placeholder="Ваше имя" name="name" maxlength="20")
-        input.form_input(type="text" required placeholder="Ваш телефон" name="tel")
-        button.form_btn(type="submit") отправить
+          input.form_input(type="text" required placeholder="Ваше имя" name="name" maxlength="20")
+          input.form_input(type="text" required placeholder="Ваш телефон" name="tel")
+          button.form_btn(type="submit") отправить
