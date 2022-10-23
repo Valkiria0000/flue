@@ -14,7 +14,7 @@ mixin breadcrumbs(breadcrumbs_items)
     each item in breadcrumbs_items
       li.breadcrumbs_item: a.breadcrumbs_link(href=item.href) #{item.title}
 
-mixin footer_content (catalog_items)
+mixin footer_content(catalog_items)
   ul.footer-nav 
     each item in catalog_items
       li.footer-nav_items: a.footer-nav_links(href=item.href) #{item.title}

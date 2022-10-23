@@ -6,8 +6,8 @@ $black: #000;
 $white: #fff;
 $borderColor: #e5e5e5;
 
-$maxWidth: 1440;
-$maxWidthContainer: 1100;
+$maxWidth: 1920;
+$maxWidthContainer: 1231;
 
 @mixin adaptiv($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
@@ -63,6 +63,9 @@ body {
       width: 64px;
       margin-right: auto;
     }
+    @media (max-width: 320px) {
+      width: 48px;
+    }
   }
 }
 .burger {
@@ -86,6 +89,9 @@ body {
     order: 3;
     right: 0;
     margin-right: -16px;
+  }
+  @media (max-width: 320px) {
+    transform: scale(0.8);
   }
 }
 
@@ -117,17 +123,17 @@ body {
 .burger_line.burger-active {
   height: 0;
 }
-
+.burger_line.burger-active::after,
 .burger_line.burger-active::before {
-  transform: rotate(-45deg);
   background-color: $black;
   transition: 1s;
+}
+.burger_line.burger-active::before {
+  transform: rotate(-45deg);
 }
 
 .burger_line.burger-active::after {
   transform: rotate(45deg);
-  background-color: $black;
-  transition: 1s;
 }
 .nav {
   display: flex;
@@ -138,7 +144,6 @@ body {
 }
 .navmenu {
   display: flex;
-
   list-style-type: none;
   margin-right: 58px;
   &_item {
@@ -215,6 +220,9 @@ body {
   @media (max-width: 768px) {
     margin-right: 24px;
   }
+  @media (max-width: 320px) {
+    margin-right: 0;
+  }
   &_btn {
     width: 56px;
     height: 56px;
@@ -230,6 +238,15 @@ body {
       border: 1px solid $black;
       transform: rotateY(180deg);
       transition: 1s;
+    }
+    &:nth-child(-n + 2) {
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 320px) {
+      transform: scale(0.8);
     }
   }
   &::before {
@@ -249,9 +266,8 @@ body {
     line-height: 13px;
     z-index: 2;
   }
-  &_img {
-  }
 }
+
 .main {
   max-width: 1231px;
   margin: 0 auto;
@@ -273,15 +289,23 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 73px;
-  color: #000;
-  letter-spacing: 4px;
+  color: $black;
   margin-top: 32px;
   margin-bottom: 41px;
+  letter-spacing: 4px;
   @media (max-width: 768px) {
-    font-size: 45px;
     line-height: 55px;
+    font-size: 45px;
+    letter-spacing: 3px;
     margin-bottom: 30px;
     margin-top: 54px;
+  }
+  @media (max-width: 320px) {
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+    margin-top: 26px;
   }
 }
 .breadcrumbs {
@@ -291,6 +315,9 @@ body {
   margin-bottom: 80px;
   @media (max-width: 768px) {
     margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 17px;
   }
   &_menu {
     display: flex;
@@ -330,6 +357,11 @@ body {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 1px;
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0px;
+  }
 }
 .content {
   display: flex;
@@ -355,6 +387,11 @@ body {
     @media (max-width: 768px) {
       font-size: 30px;
       line-height: 52px;
+    }
+    @media (max-width: 320px) {
+      font-size: 18px;
+      line-height: 37px;
+      letter-spacing: 0;
     }
   }
 }
@@ -386,6 +423,10 @@ body {
     font-size: 40px;
     line-height: 52px;
   }
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 .text-list {
   font-weight: 400;
@@ -397,6 +438,11 @@ body {
   @media (max-width: 768px) {
     margin-top: 13px;
   }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   &_item {
     font-weight: 400;
     font-size: 16px;
@@ -427,6 +473,11 @@ body {
     margin-top: 26px;
     margin-bottom: 0;
   }
+  @media (max-width: 320px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::after {
     content: "";
     width: 74px;
@@ -451,6 +502,9 @@ body {
     font-size: 14px;
     line-height: 26px;
     column-gap: 139px;
+  }
+  @media (max-width: 768px) {
+    column-count: 1;
   }
 }
 .number-text {
@@ -498,6 +552,10 @@ body {
       line-height: 30px;
       letter-spacing: -3px;
       margin-top: 9px;
+    }
+    @media (max-width: 768px) {
+      font-size: 22px;
+      line-height: 30px;
     }
   }
   &_text {
@@ -598,18 +656,31 @@ body {
     margin: 29px 0;
     padding-left: 73px;
   }
+  @media (max-width: 320px) {
+    box-shadow: none;
+    padding: 0;
+  }
   &_title {
     font-weight: 500;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 1.4px;
+    @media (max-width: 320px) {
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0;
+    }
   }
   &_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 60px;
-
     letter-spacing: 1px;
+    @media (max-width: 320px) {
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: 0;
+    }
   }
 }
 .is-orange {
@@ -647,6 +718,11 @@ body {
     @media (max-width: 768px) {
       width: 354px;
       margin-bottom: 15px;
+    }
+    @media (max-width: 320px) {
+      margin: 0;
+      margin-bottom: 14px;
+      width: 290px;
     }
   }
 
@@ -700,11 +776,7 @@ body {
     display: none;
   }
 }
-.video frame {
-  @media (max-width: 768px) {
-    width: auto;
-  }
-}
+
 .video .title {
   margin-top: 114px;
   margin-bottom: 65px;
@@ -719,8 +791,7 @@ body {
   top: 51%;
   position: absolute;
 }
-.portfolio {
-}
+
 .portfolio .title {
   margin-bottom: 60px;
   margin-top: 0px;
@@ -737,11 +808,15 @@ body {
     width: 708px;
     justify-content: center;
   }
+  @media (max-width: 320px) {
+    width: auto;
+  }
   &_img {
     position: relative;
     transform: scale(1.05);
     @media (max-width: 768px) {
       width: 226px;
+      transform: scale(1.07);
     }
   }
 
@@ -776,14 +851,15 @@ body {
       bottom: 5px;
       left: 2px;
       border-width: 0 0 6px 6px;
-      width: calc(100% - 5px);
-      height: calc(100% - 9px);
     }
 
     &:hover::after {
       top: -2px;
       right: -4px;
       border-width: 6px 6px 0 0;
+    }
+    &:hover::before,
+    &:hover::after {
       width: calc(100% - 5px);
       height: calc(100% - 9px);
     }
@@ -872,6 +948,9 @@ body {
     top: 18px;
     left: 40%;
     margin: 0;
+  }
+  @media (max-width: 320px) {
+    left: 16%;
   }
 }
 .footer .social_img {
