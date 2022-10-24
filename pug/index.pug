@@ -6,7 +6,7 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1.0" )
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     link(href="css/style.css" rel="stylesheet")
-  body
+  body.body
     include includes/header.pug
     main.main 
       include includes/section-progress.pug
@@ -14,6 +14,8 @@ html(lang="ru")
       include includes/section-video.pug
       include includes/section-portfolio.pug
     include includes/footer.pug 
+
+    script(src="../js/burger.js") 
      
          
       

@@ -74,20 +74,14 @@ body {
   border: 1px solid #4c858b;
   border-radius: 50%;
   margin-right: 32px;
+  z-index: 4;
 }
 .burger:hover {
   border: 1px solid #4c858b;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
   -webkit-transition: 1s;
   transition: 1s;
 }
-@media (max-width: 1050px) {
-  .burger {
-    margin-left: auto;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 1710px) {
   .burger {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -171,11 +165,6 @@ body {
             justify-content: center;
   }
 }
-@media (max-width: 1050px) {
-  .nav {
-    display: none;
-  }
-}
 
 .navmenu {
   display: -webkit-box;
@@ -206,9 +195,59 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+@media (max-width: 1710px) {
+  .navmenu_link {
+    font-size: 46px;
+    text-shadow: 2px 3px 4px #4c858b;
+  }
+}
+@media (max-width: 900px) {
+  .navmenu_link {
+    font-size: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .navmenu_link {
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .navmenu_link {
+    font-size: 18px;
+  }
+}
 .navmenu_link:hover {
   color: #215359;
   border-bottom: 1px solid #215359;
+}
+
+@media (max-width: 1710px) {
+  .navmenu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba(203, 207, 203, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.menu_active {
+  left: 0;
 }
 
 .contact-menu {
@@ -224,6 +263,11 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media (max-width: 1050px) {
+  .contact-menu {
+    display: none;
   }
 }
 .contact-menu_link {
@@ -286,6 +330,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+@media (max-width: 1050px) {
+  .groop {
+    margin-left: auto;
+  }
 }
 @media (max-width: 768px) {
   .groop {
