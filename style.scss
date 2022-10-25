@@ -24,6 +24,7 @@ body {
   display: flex;
   padding: 25px 47px;
   align-items: center;
+  justify-content: center;
   @media (max-width: 1910px) {
     padding: 26px 20px;
     justify-content: space-between;
