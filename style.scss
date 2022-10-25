@@ -605,11 +605,11 @@ body {
     }
     @media (max-width: 680px) {
       line-height: 40px;
+      letter-spacing: 0px;
     }
     @media (max-width: 440px) {
       font-size: 22px;
       line-height: 30px;
-      letter-spacing: 0px;
     }
   }
   &_text {
@@ -618,12 +618,10 @@ body {
     line-height: 40px;
     letter-spacing: 1px;
     text-align: center;
-    margin-left: -15px;
     margin-top: 14px;
     @media (max-width: 768px) {
       font-size: 16px;
-      line-height: 30px;
-      letter-spacing: 1px;
+      line-height: 40px;
     }
   }
   &_cards {
@@ -975,11 +973,10 @@ body {
     padding: 60px 40px;
   }
   @media (max-width: 950px) {
-    padding: 30px 10px;
     justify-content: center;
   }
-  @media (max-width: 950px) {
-    padding: 10px 0;
+  @media (max-width: 768px) {
+    padding: 30px 0;
     justify-content: center;
   }
 }
