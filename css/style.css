@@ -820,6 +820,7 @@ body {
   .info_title {
     font-size: 22px;
     line-height: 30px;
+    letter-spacing: 0px;
   }
 }
 .info_text {
