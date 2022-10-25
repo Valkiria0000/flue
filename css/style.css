@@ -1091,6 +1091,11 @@ body {
   transition: 0.6s;
 }
 
+.error {
+  -webkit-box-shadow: 0 0 15px #e33e54;
+          box-shadow: 0 0 15px #e33e54;
+}
+
 .video_wrapper {
   position: relative;
   display: -webkit-box;
@@ -1382,9 +1387,4 @@ body {
 
 .footer .social_img {
   margin-right: 40px;
-}
-
-.error {
-  -webkit-box-shadow: 0 0 15px #e33e54;
-          box-shadow: 0 0 15px #e33e54;
 }

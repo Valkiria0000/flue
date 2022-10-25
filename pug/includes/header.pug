@@ -4,20 +4,15 @@ header.header
   a(href="index.html")
     img.header_logo(src="img/Logo.png", alt="logo company")
   .burger
-    span.burger_line
-              
+    span.burger_line         
   nav.nav
-    
     +nav([{'title': 'каталог товаров', 'href': '#'}, 
         {'title': 'доставка и оплата', 'href': '#'},
         {'title': 'Цены ', 'href': '#'},
         {'title': 'Контакты ', 'href': '#'}])
-      
-    
     .contact-menu 
       a.contact-menu_link(href="tel:+78125092198" title="позвонить") <span class="mark-span">+7 (812)</span> 509 21 98
       a.contact-menu_link.red-link(href="#" title="отправить") перезвоните мне
-
       include social.pug
   +groop([
     {"src": "img/icon/search.svg", "alt": "icon search"},
