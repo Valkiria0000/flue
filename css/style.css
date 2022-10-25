@@ -34,9 +34,6 @@ body {
 @media (max-width: 768px) {
   .header {
     padding: 26px 16px;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
   }
 }
 .header_logo {
