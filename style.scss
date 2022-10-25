@@ -942,7 +942,6 @@ body {
   position: relative;
   @media (max-width: 768px) {
     margin-top: 0;
-    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -976,6 +975,10 @@ body {
   }
   @media (max-width: 950px) {
     padding: 30px 10px;
+    justify-content: center;
+  }
+  @media (max-width: 950px) {
+    padding: 10px 0;
     justify-content: center;
   }
 }
@@ -1028,10 +1031,13 @@ body {
 .footer .social {
   margin-top: 28px;
   @media (max-width: 950px) {
-    margin-right: 0px;
+    margin: 0px;
     justify-content: center;
   }
 }
 .footer .social_img {
   margin-right: 40px;
+  @media (max-width: 500px) {
+    margin-right: 20px;
+  }
 }
