@@ -20,7 +20,9 @@ section.info
       .form-content
         p.form-content_title Для <span class="is-orange">консультации</span> заполните форму!
         p.form-content_text С Вами свяжутся в ближайшее время
-        form.form(action="", method="get")
-          input.form_input(type="text" required placeholder="Ваше имя" name="name" maxlength="20")
-          input.form_input(type="text" required placeholder="Ваш телефон" name="tel")
-          button.form_btn(type="submit") отправить
+        form.form(action="#" method="get" id="form")
+          label
+            input.form_input.req(type="text" placeholder="Ваше имя" maxlength="20")
+          label
+            input.form_input.req.tel(type="text" placeholder="Ваш телефон" name="tel")
+          button.form_btn отправить

@@ -470,7 +470,16 @@ body {
     right: 20%;
   }
 }
-
+.img-triangle1 {
+  position: absolute;
+  top: 26%;
+  left: 15px;
+}
+.img-triangle2 {
+  position: absolute;
+  top: 9%;
+  right: 0;
+}
 .img-dotted1,
 .img-dotted2 {
   @media (max-width: 1550px) {
@@ -781,17 +790,17 @@ body {
 
   &_input {
     width: 240px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid $borderColor;
     padding: 25px 17px;
     letter-spacing: 1px;
     margin-right: 16px;
     cursor: pointer;
     &:hover {
-      box-shadow: 0 0 11px $green;
+      box-shadow: 0 0 15px blue;
       transition: 0.5s;
     }
     &:focus {
-      box-shadow: 0 0 11px $orange;
+      box-shadow: 0 0 15px $green;
       transition: 0.5s;
     }
 
@@ -1062,4 +1071,8 @@ body {
 }
 .footer .social_img {
   margin-right: 40px;
+}
+
+.error {
+  box-shadow: 0 0 15px $red;
 }

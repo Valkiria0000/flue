@@ -12,4 +12,4 @@ function burger() {
     }
   });
 }
-burger();
+document.addEventListener("DOMContentLoaded", burger);
