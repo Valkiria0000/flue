@@ -883,7 +883,7 @@ body {
   }
   &_img {
     position: relative;
-    transform: scale(1.05);
+    transform: scale(1.06);
 
     @media (max-width: 768px) {
       width: 226px;
@@ -907,31 +907,31 @@ body {
       z-index: 3;
     }
     &::before {
-      bottom: 11px;
-      left: 0;
+      bottom: 7px;
+      left: 0px;
       border-width: 0 0 6px 6px;
     }
 
     &::after {
-      top: -2px;
+      top: 0px;
       right: 0px;
       border-width: 6px 6px 0 0;
     }
     &:hover::before {
-      bottom: 5px;
-      left: 2px;
+      bottom: 0px;
+      left: 0px;
       border-width: 0 0 6px 6px;
     }
 
     &:hover::after {
-      top: -2px;
-      right: -4px;
+      top: 0px;
+      right: 0px;
       border-width: 6px 6px 0 0;
     }
     &:hover::before,
     &:hover::after {
-      width: calc(100% - 5px);
-      height: calc(100% - 9px);
+      width: calc(100% - 7px);
+      height: calc(100% - 7px);
     }
   }
 }
@@ -1038,4 +1038,59 @@ body {
   @media (max-width: 500px) {
     margin-right: 20px;
   }
+}
+
+html.dark body {
+  color: $white;
+  background-color: rgb(54, 50, 50);
+}
+
+html.light body {
+  background-color: $white;
+  color: $black;
+}
+.page {
+  position: relative;
+  display: flex;
+}
+.page__reset {
+  opacity: 0;
+  visibility: hidden;
+}
+.page__reset.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page__reset::before {
+  content: "x";
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  font-size: 9px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  background-color: #215359;
+  justify-content: center;
+  align-items: center;
+}
+.page__theme {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+html.dark .page__theme {
+  background-image: url(../img/svg/sun.svg);
+}
+html.light .page__theme {
+  background-image: url(../img/svg/moon.svg);
 }
